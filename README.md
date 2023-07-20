@@ -1,15 +1,34 @@
-# SpringBoot-MSA
+# SpringBoot - MSA Project History
 
-## Micro Service Architecture 구현
+## 목차
+
+1. [Discovery Server ( Eureka )](##1-Discovery-Server-생성-(Eureka))
+2. [API Gateway 생성](##2-API-Gateway-생성)
+3. [User Service 생성](##3-User-Service-생성)
+
+---
+
 
 ### #1 Discovery Server 생성 (Eureka)
 
+```
+서비스 정보
 - port : 8761
 - name : discovery-service
 - localhost:8000 에서 Discovery Client 확인 가능
+
+dependencies
+- Eureka Server
+- Lombok
+```
+
+---
+
   
 ### #2 API Gateway 생성
 
+```
+서비스 정보
 - port : 8000
 - name : apigateway-service
 - 추가한 micro service를 등록
@@ -17,10 +36,30 @@
     - (o) user-service 
     - (x) catalog-service
     - (x) order-service
- 
 
-### #3 user-service 생성
+dependencies
+  - Netflix Eureka Client
+  - Gateway
+  - Lombok
 
+```
+### #3 User Service 생성
+
+```
+서비스 정보
 - eureka server에서 random port 지정
 - localhost:8000/user-service/health-check 를 통해 접속 확인 가능
+
+
+dependencies
+  - Netflix Eureka Client
+  - Spring Web
+  - Spring Data JPA
+  - Spring Security
+  - Spring Boot Devtools
+  - MySQL Connector
+  - Lombok
+```
+
+---
 
