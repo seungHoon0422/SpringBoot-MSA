@@ -19,6 +19,12 @@ spring:
           predicates:
             - Path=/user-service/**
           uri: lb://USER-SERVICE
+
+        - id: place-service
+          predicates:
+            - Path=/place-service/**
+          uri: lb://PLACE-SERVICE
+
 #      filters:
 #        - CustomFilter
 

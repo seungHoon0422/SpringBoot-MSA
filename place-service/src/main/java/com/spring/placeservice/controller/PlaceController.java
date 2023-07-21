@@ -1,4 +1,4 @@
-package com.spring.userservice;
+package com.spring.placeservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/user-service")
-public class UserController {
+@RequestMapping("/place-service")
+public class PlaceController {
 
     @GetMapping("/health-check")
     public String healthCheck() {
-        System.out.println("GET health-check");
         return "OK";
     }
+
 
 }
