@@ -9,7 +9,7 @@
 ---
 
 
-### #1 Discovery Server 생성 (Eureka)
+### Discovery Server 생성 (Eureka)
 
 ```
 서비스 정보
@@ -25,7 +25,7 @@ dependencies
 ---
 
   
-### #2 API Gateway 생성
+### API Gateway 생성
 
 ```
 서비스 정보
@@ -43,7 +43,7 @@ dependencies
   - Lombok
 
 ```
-### #3 User Service 생성
+### User Service 생성
 
 ```
 서비스 정보
