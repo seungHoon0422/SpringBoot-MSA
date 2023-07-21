@@ -2,9 +2,9 @@
 
 ## 목차
 
-1. [Discovery Server ( Eureka )](##1-Discovery-Server-생성-(Eureka))
-2. [API Gateway 생성](##2-API-Gateway-생성)
-3. [User Service 생성](##3-User-Service-생성)
+1. [Discovery Server ( Eureka )](###Discovery-Server-생성-(Eureka))
+2. [API Gateway 생성](###API-Gateway-생성)
+3. [User Service 생성](###User-Service-생성)
 
 ---
 
