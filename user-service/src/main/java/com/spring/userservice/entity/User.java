@@ -23,17 +23,26 @@ public class User {
     @NotNull
     private String name;
 
+    @Column
+    private String nickname;
+
     @Column(name = "password")
     @NotNull
     private String password;
+
+    @Column(name = "type")
+    @Enumerated(EnumType.STRING)
+    private Type type;
 
     @Column
     private LocalDateTime createdDate;
 
     @Builder
-    public User(String name, String password) {
+    public User(String name, String nickname, String password) {
         this.name = name;
+        this.nickname = nickname;
         this.password = password;
+        this.type = Type.USER;
         this.createdDate = LocalDateTime.now();
     }
 
