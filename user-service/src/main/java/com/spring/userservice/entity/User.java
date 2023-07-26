@@ -1,6 +1,7 @@
 package com.spring.userservice.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -9,6 +10,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -36,6 +39,10 @@ public class User {
 
     @Column
     private LocalDateTime createdDate;
+
+    @OneToMany(mappedBy = "user")
+    private List<Favorite> favoriteList = new ArrayList<>();
+
 
     @Builder
     public User(String name, String nickname, String password) {
